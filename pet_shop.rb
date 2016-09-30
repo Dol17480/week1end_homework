@@ -40,4 +40,15 @@ def pets_by_breed(shop, breed)
     return matched_pets
 end
 
+def pets_by_breed(shop, breed)
+  matched_pets = []
+  for pet in shop[:pets] 
+  
+    if pet[:breed] == breed
+      matched_pets << pet
+    end
+  end
+    return matched_pets
+end
+
 
