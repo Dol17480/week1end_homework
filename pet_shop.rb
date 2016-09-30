@@ -19,4 +19,25 @@ def pets_sold(sum)
 
 end
 
+def increase_pets_sold(shop, num_of_pets)
+  return @pet_shop[:admin][:pets_sold] += 2
+
+end
+
+def stock_count(pets)
+  total_pets = @pet_shop[:pets].count
+  return total_pets
+end
+
+def pets_by_breed(shop, breed)
+  matched_pets = []
+  for pet in shop[:pets] 
+  
+    if pet[:breed] == breed
+      matched_pets << pet
+    end
+  end
+    return matched_pets
+end
+
 
