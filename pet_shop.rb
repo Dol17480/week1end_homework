@@ -32,23 +32,64 @@ end
 def pets_by_breed(shop, breed)
   matched_pets = []
   for pet in shop[:pets] 
-  
+
     if pet[:breed] == breed
       matched_pets << pet
     end
   end
-    return matched_pets
+  return matched_pets
 end
 
 def pets_by_breed(shop, breed)
   matched_pets = []
   for pet in shop[:pets] 
-  
+
     if pet[:breed] == breed
       matched_pets << pet
     end
   end
-    return matched_pets
+  return matched_pets
 end
+
+def find_pet_by_name(pet, name)
+return @pet_shop.find {|x| x[:name] == "Arthur"}
+end
+
+#    named_pets = []
+#   for pet in @pet_shop[:pets]
+
+#     if pet[:name] == pet[:name]
+#       named_pets << pet
+#     end
+#   end
+#   return named_pets
+# end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
