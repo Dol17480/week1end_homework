@@ -25,7 +25,7 @@ def increase_pets_sold(shop, num_of_pets)
 end
 
 def stock_count(pets)
-  total_pets = @pet_shop[:pets].count
+  total_pets = @customers[:pets].count
   return total_pets
 end
 
@@ -52,23 +52,28 @@ def pets_by_breed(shop, breed)
 end
 
 def find_pet_by_name(pet, name)
-return @pet_shop.find {|x| x[:name] == "Arthur"}
+   named_pets = []
+  for pet in @pet_shop[:pets][0][:name]
+
+    if pet[:name] == "Arthur"
+      named_pets << pet
+    end
+  end
+  return named_pets
 end
 
-#    named_pets = []
-#   for pet in @pet_shop[:pets]
+def customer_pet_count (sum)
+    total_pets = @customers[0][:pets].count
+    return total_pets
+  end
 
-#     if pet[:name] == pet[:name]
-#       named_pets << pet
-#     end
-#   end
-#   return named_pets
-# end
+def add_pet_to_stock(shop, pet)
+  return @pet_shop[:pets].push(@new_pet)
+end
 
-
-
-
-
+def add_pet_to_customer(shop, pet)
+  return @customers[0][:pets].push(new_pet)
+end
 
 
 
